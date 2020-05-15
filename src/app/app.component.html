@@ -1,6 +1,8 @@
 <h1>Angular Router App</h1>
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
 <nav>
+  <p>{{"language"|translate}}</p>
+  <button (click)="changeLan()">语言切换</button>
   <ul>
     <li><a routerLink="/globalmanage" routerLinkActive="active">基础配置</a></li>
     <li><a routerLink="/forumtype" routerLinkActive="active">主题分类</a></li>
