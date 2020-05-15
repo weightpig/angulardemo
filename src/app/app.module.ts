@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GlobalManageComponent } from './global-manage/global-manage.component';
+import { ForumtypeComponent } from './forumtype/forumtype.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GlobalManageComponent,
+    ForumtypeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //主视图
 })
 export class AppModule { }
