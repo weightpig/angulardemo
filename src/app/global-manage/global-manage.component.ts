@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GlobalManageComponent implements OnInit {
   title="基础配置";
+  date = null;
 
   constructor() { }
 
