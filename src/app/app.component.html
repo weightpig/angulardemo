@@ -1,12 +1,48 @@
-<h1>Angular Router App</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
-  <p>{{"language"|translate}}</p>
-  <button (click)="changeLan()">语言切换</button>
-  <ul>
-    <li><a routerLink="/globalmanage" routerLinkActive="active">基础配置</a></li>
-    <li><a routerLink="/forumtype" routerLinkActive="active">主题分类</a></li>
-  </ul>
-</nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<nz-layout>
+  <nz-header>
+    <div class="logo"><a routerLink="/" routerLinkActive="active">论坛管理后台系统</a></div>
+    <div class="person">{{personText}}</div>
+  </nz-header>
+  <nz-layout>
+    <nz-sider nzWidth="200px" nzTheme="light">
+      <ul nz-menu nzMode="inline" class="sider-menu">
+        <li nz-submenu nzIcon="user" nzTitle="全局管理">
+          <ul>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">基础配置</a></li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="论坛管理" nzIcon="laptop">
+          <ul>
+            <li nz-menu-item><a routerLink="/forumtype" routerLinkActive="active">主题分类</a></li>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">版块分类</a></li>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">版块管理</a></li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="运营管理" nzIcon="notification">
+          <ul>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">广告管理</a></li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="内容管理" nzIcon="notification">
+          <ul>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">主题管理</a></li>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">主题回收站</a></li>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">评论管理</a></li>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">评论回收站</a></li>
+            <li nz-menu-item><a routerLink="/globalmanage" routerLinkActive="active">词语过滤</a></li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="demo" nzIcon="notification">
+          <ul>
+            <li nz-menu-item><a routerLink="/manyroute" routerLinkActive="active">多层嵌套路由</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout class="inner-layout">
+      <nz-content>
+          <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

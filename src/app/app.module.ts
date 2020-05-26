@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,15 @@ import { zh_CN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { ManyRouteComponent } from './many-route/many-route.component';
+import { RouteChild1Component } from './route-child1/route-child1.component';
+import { RouteChild2Component } from './route-child2/route-child2.component';
+import { Son1Component } from './son1/son1.component';
+import { Son2Component } from './son2/son2.component';
 
 registerLocaleData(zh);
 export function createTranslateLoader(http: HttpClient) {
@@ -27,6 +36,11 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     GlobalManageComponent,
     ForumtypeComponent,
+    ManyRouteComponent,
+    RouteChild1Component,
+    RouteChild2Component,
+    Son1Component,
+    Son2Component,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +55,11 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     FormsModule,
     BrowserAnimationsModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    NzLayoutModule,
+    NgZorroAntdModule,
+    NzTableModule,
+    NzButtonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent] //主视图

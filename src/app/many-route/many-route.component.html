@@ -1,0 +1,14 @@
+<div>
+    <!-- ngFor 的demo -->
+    <ul class="deyunList">
+        <li >
+            <span class="name">姓名：</span><span>性别：</span>
+        </li>
+        <li *ngFor="let item of personList">
+            <span class="name">{{item.name}}</span><span>{{item.sex}}</span>
+        </li>
+    </ul>
+    <a routerLink="/manyroute/child1" routerLinkActive="active">子路由1</a>
+    <a routerLink="/manyroute/child2" routerLinkActive="active">子路由2</a>
+    <router-outlet></router-outlet>
+</div>

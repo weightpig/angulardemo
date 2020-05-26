@@ -1,0 +1,48 @@
+/* 公共样式 */
+.logo{
+  height: 64px;
+  float: left;
+}
+.logo a{
+    font-size: 16px;
+    font-weight: 550;
+    color: #ffffff;
+  }
+
+  .header-menu {
+    line-height: 64px;
+  }
+
+  .sider-menu {
+    height: 100%;
+    border-right: 0;
+  }
+
+  .inner-layout {
+    padding: 0 24px 24px;
+  }
+
+  nz-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+  }
+
+  nz-header{
+     background: linear-gradient(270deg, rgb(51, 138, 254) 0%, rgb(66, 178, 255) 100%);
+  }
+
+  nz-layout{
+      height: 100%;
+  }
+
+  .person{
+    float: right;
+    min-width: 90px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    height: 64px;
+    cursor: pointer;
+    text-align: center;
+  }

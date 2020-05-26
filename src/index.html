@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="min-width: 1000px;">
 <head>
   <meta charset="utf-8">
-  <title>Angulardemo</title>
+  <title>论坛后台管理系统</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -10,4 +10,15 @@
 <body>
   <app-root></app-root>
 </body>
+<script>
+  (function() {
+      document.body.style.fontSize = "14px";
+      const setRem = () => {
+        let vw = document.getElementsByTagName("html")[0].offsetWidth;
+        document.documentElement.style.fontSize = vw /10 + "px";
+      };
+      setRem();
+      window.onresize = setRem;
+    })();
+</script>
 </html>
