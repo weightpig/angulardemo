@@ -8,6 +8,17 @@
             <span class="name">{{item.name}}</span><span>{{item.sex}}</span>
         </li>
     </ul>
+    <a nz-dropdown [nzDropdownMenu]="menu">
+        Hover me
+        <i nz-icon nzType="down"></i>
+      </a>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>3rd menu item</li>
+        </ul>
+      </nz-dropdown-menu>
     <a routerLink="/manyroute/child1" routerLinkActive="active">子路由1</a>
     <a routerLink="/manyroute/child2" routerLinkActive="active">子路由2</a>
     <router-outlet></router-outlet>

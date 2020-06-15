@@ -25,6 +25,8 @@ import { RouteChild1Component } from './route-child1/route-child1.component';
 import { RouteChild2Component } from './route-child2/route-child2.component';
 import { Son1Component } from './son1/son1.component';
 import { Son2Component } from './son2/son2.component';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 registerLocaleData(zh);
 export function createTranslateLoader(http: HttpClient) {
@@ -60,6 +62,8 @@ export function createTranslateLoader(http: HttpClient) {
     NgZorroAntdModule,
     NzTableModule,
     NzButtonModule,
+    NzDropDownModule,
+    NzMenuModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent] //主视图
