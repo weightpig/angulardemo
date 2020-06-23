@@ -31,7 +31,8 @@ const routes: Routes = [{
       component: RouteChild2Component,
     }
   ]
-}];
+},
+  { path: 'test', loadChildren: () => import('./test/test.module').then(m => m.TestModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

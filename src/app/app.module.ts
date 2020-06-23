@@ -27,6 +27,7 @@ import { Son1Component } from './son1/son1.component';
 import { Son2Component } from './son2/son2.component';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+// import { LoginComponent } from './login/login.component';
 
 registerLocaleData(zh);
 export function createTranslateLoader(http: HttpClient) {
@@ -43,6 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
     RouteChild2Component,
     Son1Component,
     Son2Component,
+    // LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,16 +27,16 @@ export class AppComponent {
   }
 
   //国际化转换
-  // changeLan(){
-  //   if(this.language){
-  //     this.translate.use("en_us");
-  //     this.i18n.setLocale(en_US);
-  //   }else{
-  //     this.translate.use("zh_cn");
-  //     this.i18n.setLocale(zh_CN);
-  //   }
-  //   this.language=!this.language;
-  // }
+  changeLan(){
+    if(this.language){
+      this.translate.use("en_us");
+      this.i18n.setLocale(en_US);
+    }else{
+      this.translate.use("zh_cn");
+      this.i18n.setLocale(zh_CN);
+    }
+    this.language=!this.language;
+  }
   ngOnInit(): void {
     //组件初始化时被调用
     const that=this;
